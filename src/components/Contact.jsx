@@ -3,7 +3,7 @@ import Contacts from '../assets/contact.png'
 
 const Contact = () => {
   return (
-    <div className='container my-20'>
+    <div className='container my-10'>
         <h2 className='text-5xl font-black text-orange-600 text-center'>Contact Us</h2>
        
         <h2 className='text-center text-3xl'>Get in touch</h2>
@@ -56,22 +56,31 @@ const Contact = () => {
             
         </div>
 
-        <div className='flex justify-between items-center gap-32  px-28'>
+        <div className='grid md:grid-cols-3 grid-cols-1 '>
 
-                <div className='flex flex-col '>
-                <h2 className='text-3xl'>Address</h2>                
-                <h2>No.124/15,Beliatta Road,Walasmulla</h2> 
+                <div className='flex justify-center items-center pt-5'>
+                    <div className='text-center'>
+                     <h2 className='text-3xl'>Address</h2>                
+                     <h2 >No.124/15,Beliatta Road,Walasmulla</h2>
+                    </div>
                 </div>
 
-                <div className='flex flex-col '>
-                <h2 className='text-3xl'>Contact</h2>                
-                <h2>047-1234567</h2> 
+                <div className='flex justify-center items-center pt-5'>
+                    <div className='text-center '>
+                    <h2 className='text-3xl'>Contact</h2>                
+                    <h2 >047-1234567</h2> 
+                    </div>
                 </div>
 
-                <div className='flex flex-col '>
-                <h2 className='text-3xl'>Email</h2>                
-                <h2>www.chefmook.lk</h2> 
+
+                <div className='flex justify-center items-center pt-5'>
+                    <div className='text-center'>
+                    <h2 className='text-3xl '>Email</h2>                
+                    <h2 >www.chefmook.lk</h2> 
+                    </div>
                 </div>
+                
+             
                                
 
         </div>

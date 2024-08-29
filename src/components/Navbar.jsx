@@ -50,14 +50,14 @@ const Navbar = () => {
   return (
     <nav>
         <div className='container flex items-center justify-between p-5 '>
-            <motion.h1  className="text-5xl font-black tracking-wider"
+            <motion.h1  className="md:text-5xl text-4xl font-black tracking-wider"
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             transition={{duration:2,delay:0.5}}>Chef<span className='text-orange-600'>Mook...</span></motion.h1>
             
             
-            <div className="hidden md:block">
-                <ul className="flex font-bold text-xl p-2 gap-6">
+            <div className="hidden lg:block">
+                <ul className="flex font-bold  p-2 gap-6">
                     {
                         navMenu.map((menu)=>{
                             return(
@@ -74,9 +74,13 @@ const Navbar = () => {
                     }
                 </ul>
             </div>
-            <div className='p-3 bg-gray-600 rounded-full hover:cursor-pointer'>
-            <IoMdCart  className='text-3xl text-white '/>
-            </div>
+            <motion.div 
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{duration:0.8,delay:1.5}}
+            className='p-3 bg-gray-600 rounded-full hover:cursor-pointer hidden lg:block'>
+            <IoMdCart  className='text-3xl text-white  '/>
+            </motion.div>
 
         </div>
     </nav>

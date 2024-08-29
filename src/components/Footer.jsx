@@ -12,25 +12,25 @@ const Footer = () => {
             id:1,
             title:"Home",
             path:"/",
-            delay:0.1
+         
         },
         {
             id:2,
             title:"About",
             path:"/about",
-            delay:0.2
+         
         },
         {
             id:3,
             title:"Hot Deals",
             path:"/service",
-            delay:0.3
+            
         },
         {
             id:4,
             title:"Contact",
             path:"/contact",
-            delay:0.4
+            
         },
     ];
   return (
@@ -46,11 +46,11 @@ const Footer = () => {
 
     </div>
     
-    <ul className="flex justify-center font-bold text-xl p-2 gap-6">
+    <ul className="flex justify-center font-bold sm:text-xl p-2 gap-6">
     {
         navMenu.map((item)=>{
             return(
-                <li key={item.id} className='gap-5'>
+                <li key={item.id} className='gap-5 '>
                    {item.title}
                 </li>
             )
