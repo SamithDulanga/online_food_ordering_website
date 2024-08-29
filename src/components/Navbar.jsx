@@ -1,6 +1,7 @@
 import React from 'react'
 import Logo from '../assets/logo.png';
 import {motion} from "framer-motion";
+import { IoMdCart } from "react-icons/io";
 
 const Navbar = () => {
     const navMenu=[
@@ -18,7 +19,7 @@ const Navbar = () => {
         },
         {
             id:3,
-            title:"Service",
+            title:"Hot Deals",
             path:"/service",
             delay:0.3
         },
@@ -48,12 +49,11 @@ const Navbar = () => {
     }
   return (
     <nav>
-        <div className='container flex items-center justify-between '>
-            {/* <img src={Logo} alt='' className='w-36'/> */}
+        <div className='container flex items-center justify-between p-5 '>
             <motion.h1  className="text-5xl font-black tracking-wider"
             initial={{opacity: 0}}
             animate={{opacity: 1}}
-            transition={{duration:2,delay:0.5}}>ThingsTo<span className='text-orange-600'>Know...</span></motion.h1>
+            transition={{duration:2,delay:0.5}}>Chef<span className='text-orange-600'>Mook...</span></motion.h1>
             
             
             <div className="hidden md:block">
@@ -66,13 +66,16 @@ const Navbar = () => {
                                 initial="initial"
                                 animate="animate"
                                 key={menu.id} data-delay={menu.delay} className='navMenu'>
-                                    <a href={menu.path} className="inline-block px-2 py-2 text-2xl ">{menu.title}</a>
+                                    <a href={menu.path} className="inline-block px-2 py-2 text-3xl text-gray-600 ">{menu.title}</a>
 
                                 </motion.li>
                             )
                         })
                     }
                 </ul>
+            </div>
+            <div className='p-3 bg-gray-600 rounded-full hover:cursor-pointer'>
+            <IoMdCart  className='text-3xl text-white '/>
             </div>
 
         </div>

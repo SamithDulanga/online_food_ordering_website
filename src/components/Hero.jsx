@@ -1,6 +1,7 @@
 import React from 'react'
 import Plane from '../assets/plane.png'
-import Logo from '../assets/logo.png'
+import Chef from '../assets/chef.png'
+import Food from '../assets/food.jpg'
 import {motion} from "framer-motion";
 
 const Hero = () => {
@@ -23,17 +24,17 @@ const Hero = () => {
     }
 
   return (
-    <div className='container min-h-[600px] flex justify-center'>
+    <main className='flex justify-center items-center'>
+    <div className='container min-h-[600px] flex justify-center relative z-10  m-10'>
 
-        <div className='grid md:grid-cols-2 grid-cols-1 place-items-center justify-between gap-12 lg:gap-24'>
-        <div className='text-center md:text-left '>
+        <div className='grid md:grid-cols-2 grid-cols-1 place-items-center justify-between gap-12 lg:gap-24 p-10'>
+        <div className='text-center md:text-left'>
         <motion.h2
         variants={slideUp(0.5)}
         initial="initial"
         whileInView="animate"
 
-        className='uppercase text-6xl font-black '
-        >Bringing  </motion.h2>
+        className='uppercase text-6xl font-black '>Bringing  </motion.h2>
         <div className='flex item-center justify-center gap-2'>
         <motion.h2 
         variants={slideUp(1)}
@@ -44,34 +45,33 @@ const Hero = () => {
         variants={slideUp(1.3)}
         initial="initial"
         whileInView="animate"
-        src={Plane} className='w-24'/>
+        src={Chef} className='w-24'/>
         </div>
         
         <motion.h2
         variants={slideUp(1.5)}
         initial="initial"
         whileInView="animate" 
-        className='uppercase text-6xl font-black'>to your screen</motion.h2>
+        className='uppercase text-6xl font-black'>to your table</motion.h2>
         <motion.h2 
-        variants={slideUp(1.6)}
+        variants={slideUp(1.8)}
         initial="initial"
         whileInView="animate"
-        className='px-2'>Explore diverse cultures, stunning landscapes, and unique stories.</motion.h2>
+        className='px-2 text-4xl'>The king of delicious foods</motion.h2>
         </div>
 
         <div>
             <motion.img
-            initial={{opacity:0,rotate:90,x:600,y:0}}
+            initial={{opacity:1,rotate:90,x:600,y:200}}
             whileInView={{opacity:1,rotate:0,x:0,y:0}}
-            transition={{duration:1.8}}
-             src={Logo} className="w-[450px] img-shadow"/>
+            transition={{duration:2}}
+             src={Food} className="w-[550px] img-shadow z-11 rounded-full"/>
         </div>
 
-        </div>
-
-        
-        
+        </div>  
     </div>
+
+    </main>
   )
 }
 
