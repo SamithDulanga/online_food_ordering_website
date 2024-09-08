@@ -27,21 +27,20 @@ const Hero = () => {
         if (window.innerWidth < 676) {
           return { opacity: 1, rotate: 90, x: 200, y: 100 };
         } else {
-          return { opacity: 1, rotate: 90, x: 600, y: 200 };
+          return { opacity: 1, rotate: 90, x: 600, y: 0 };
         }
       };
 
   return (
-    <main className='flex justify-center items-center'>
-    <div className='container min-h-[600px] flex justify-center relative z-10  m-10'>
+    <main className='flex justify-center items-center  sm:my-20 my-14 lg:my-4 '>
+    <div className='container min-h-[600px] flex justify-center relative  m-10 '>
 
-        <div className='grid xl:grid-cols-2 grid-cols-1 place-items-center justify-between gap-12 lg:gap-24 p-10'>
+        <div className='grid xl:grid-cols-2 grid-cols-1 place-items-center justify-between gap-12 lg:gap-24 p-10 '>
         <div className=' xl:text-left text-center'>
         <motion.h2
         variants={slideUp(0.5)}
         initial="initial"
         whileInView="animate"
-
         className='uppercase md:text-6xl text-5xl font-black '>Bringing  </motion.h2>
         <div className='flex item-center justify-center gap-2'>
         <motion.h2 
@@ -73,7 +72,7 @@ const Hero = () => {
             initial={getTransformValues()}
             whileInView={{opacity:1,rotate:0,x:0,y:0}}
             transition={{duration:2}}
-             src={Food} className=" img-shadow z-11 rounded-full"/>
+             src={Food} className=" img-shadow rounded-full  md:h-[450px]  h-[170px] "/>
         </div>
 
         </div>  

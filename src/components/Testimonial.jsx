@@ -45,7 +45,7 @@ const Testimonial = () => {
 
   return (
    
-      <div className='container my-20'>
+      <div >
         <h2 className='text-5xl font-black text-orange-600 text-center '>Testimonial</h2>
         <h3 className='text-center text-3xl pb-10'>What they said.</h3>
         <div className='grid grid-cols-1 lg:grid-cols-3'>

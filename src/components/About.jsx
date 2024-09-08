@@ -3,38 +3,39 @@ import React from 'react'
 import Restaurant1 from '../assets/restaurant1.jpg'
 import Restaurant2 from '../assets/restaurant2.jpg'
 import {motion} from "framer-motion";
+import Testimonial from './Testimonial';
 
 const About = () => {
   
   return (
-    <div className='xl:mt-48 mt-10 container'>
+    <div className='my-28 lg:my-2 container'>
       <motion.h2 
       initial={{opacity:0,y:"100%"}}
       whileInView={{opacity:1,y:0}}
       transition={{duration:0.8}}
-      className='text-5xl font-black text-orange-600 text-center pb-10'>About Us</motion.h2>
+      className='text-5xl font-black text-orange-600 text-center pb-16'>About Us</motion.h2>
       
-     <div className="grid grid-cols-1 xl:grid-cols-2 text-2xl">
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-16  p-4' >
-        <div className='flex justify-center items-center'>
+     <div className="grid grid-cols-1 xl:grid-cols-2 text-2xl pb-36">
+      {/* <div className='grid grid-cols-1 md:grid-cols-2 gap-16  p-4' > */}
+        {/* <div className='flex justify-center items-center'>
         <motion.img
           initial={{opacity:0,x:"-100%"}}
           whileInView={{opacity:1,x:0}}
           transition={{duration:1.5}}
           src={Restaurant1} className='w-[250px] p-5 border bg-gray-300 '/>
-        </div>
+        </div> */}
 
         <div className='flex justify-center items-center'>
         <motion.img 
           initial={{opacity:0,x:"-100%"}}
           whileInView={{opacity:1,x:0}}
           transition={{duration:1.5}}
-          src={Restaurant2} className='w-[250px] p-5 border bg-gray-300 '/>
+          src={Restaurant2} className='sm:w-[400px] w-[300px] p-5 border bg-gray-300 '/>
 
         </div>
       
       
-      </div>
+      {/* </div> */}
       <motion.div 
        initial={{opacity:0,x:"100%"}}
        whileInView={{opacity:1,x:0}}
@@ -50,6 +51,10 @@ const About = () => {
       
 
      </div>
+     <div>
+     <Testimonial/>
+     </div>
+     
     </div>
   )
 }

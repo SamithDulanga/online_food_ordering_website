@@ -3,7 +3,7 @@ import Contacts from '../assets/contact.png'
 
 const Contact = () => {
   return (
-    <div className='container my-10'>
+    <div className='container my-28 lg:my-2'>
         <h2 className='text-5xl font-black text-orange-600 text-center'>Contact Us</h2>
        
         <h2 className='text-center text-3xl'>Get in touch</h2>
@@ -11,7 +11,7 @@ const Contact = () => {
         
       
        
-        <div className='grid grid-cols-1 md:grid-cols-2'>
+        <div className='grid grid-cols-1 lg:grid-cols-2'>
             <div className='m-10'>
                
             <form className="max-w-sm mx-auto " >
@@ -51,7 +51,7 @@ const Contact = () => {
 
 
             <div className='flex justify-center'>
-             <img src={Contacts} className='w-[500px]'/>
+             <img src={Contacts} className='lg:w-[500px] w-[300px] h-[300px] lg:h-[500px]'/>
             </div>
             
         </div>
@@ -76,7 +76,7 @@ const Contact = () => {
                 <div className='flex justify-center items-center pt-5'>
                     <div className='text-center'>
                     <h2 className='text-3xl '>Email</h2>                
-                    <h2 >www.chefmook.lk</h2> 
+                    <h2 >chefmook@gmail.com</h2> 
                     </div>
                 </div>
                 

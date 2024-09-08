@@ -2,39 +2,46 @@ import React from 'react'
 
 import {FaFacebookSquare, FaLinkedin} from "react-icons/fa";
 import {FaSquareInstagram, FaSquareXTwitter, FaSquareYoutube} from "react-icons/fa6";
+import { Link } from 'react-scroll';
 
 const Footer = () => {
-   
+ 
 
 
     const navMenu=[
         {
             id:1,
             title:"Home",
-            path:"/",
-         
+            path:"home",
+            duration:3700,
+            offset:-110
+          
         },
         {
             id:2,
             title:"About",
-            path:"/about",
-         
+            path:"about",
+            duration:1900,
+            offset:-90
         },
         {
             id:3,
             title:"Hot Deals",
-            path:"/service",
-            
+            path:"hotdeals",
+            duration:1200,
+            offset:-100
         },
         {
             id:4,
             title:"Contact",
-            path:"/contact",
+            path:"contact",
+            duration:500,
+            offset:-100
             
         },
     ];
   return (
-    <div className=' bg-green-600 pt-10 '>
+    <div className=' bg-green-600 pt-2 '>
     <div>
     <div className="flex items-center justify-center text-3xl gap-2 mt-3 ">
         
@@ -51,7 +58,14 @@ const Footer = () => {
         navMenu.map((item)=>{
             return(
                 <li key={item.id} className='gap-5 '>
-                   {item.title}
+                   <Link
+                                    to={item.path}
+                                    smooth={true}
+                                    duration={item.duration}
+                                    offset={item.offset}
+                                    className=" hover:cursor-pointer">
+                                    {item.title}
+                                </Link>
                 </li>
             )
         })

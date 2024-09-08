@@ -7,29 +7,39 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Testimonial from './components/Testimonial';
+import Cart from './components/Cart';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './AppRoutes';
 
 const App = () => {
   return (
-    <div className="overflow-x-hidden bg-white2">
-      <div className='relative overflow-hidden'>
-      <Navbar/>
-      <Hero/>
-      <About/>
-      <HotDeals/>
-      <Order/>
-      <Testimonial/>
-      <Contact/>
-      <Footer/>
-      
-      
-      
-      
-  
-     
-     
-      </div>
-      
-    </div>
+//     <div className="overflow-x-hidden bg-white2">
+//     <Navbar />
+//     <div id="home">
+//         <Hero />
+//     </div>
+//     <div id="about">
+//         <About />
+//     </div>
+//     <div id="hotdeals">
+//         <HotDeals />
+//     </div>
+//     <div id="order">
+//         <Order />
+//     </div>
+//     <div id="testimonial">
+//         <Testimonial />
+//     </div>
+//     <div id="contact">
+//         <Contact />
+//     </div>
+//     <Footer />
+// </div>
+
+   <div>
+   <RouterProvider router={router}/>
+   </div>
+   
   )
 }
 
