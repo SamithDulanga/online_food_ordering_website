@@ -130,7 +130,11 @@ const Navbar = () => {
                                     // smooth={true}
                                     // duration={menu.duration}
                                     // offset={menu.offset}
-                                    className="inline-block px-2 py-2  text-2xl text-gray-600 hover:cursor-pointer">
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? "inline-block px-2 py-2 text-2xl text-orange-600 font-bold"
+                                            : "inline-block px-2 py-2 text-2xl text-gray-600 hover:cursor-pointer"
+                                    }>
                                     {menu.title}
                                 </NavLink>
 
@@ -199,6 +203,11 @@ const Navbar = () => {
                                     // smooth={true}
                                     // duration={500}
                                     // offset={item.offset}
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? "text-orange-600 font-bold"
+                                            : "text-black"
+                                    }
                                     onClick={handleClick1}>
                                     {item.title}
                                 </NavLink>

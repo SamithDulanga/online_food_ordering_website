@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import {ShopContext} from "../components/ShopContext/ShopContext";
 import star_icon from '../assets/star_icon.png'
@@ -8,11 +8,17 @@ import arrow_icon from '../assets/breadcrum_arrow.png'
 
 const ProductDisplay = () => {
     const {addToCart} = useContext(ShopContext);
-    
     const {all_product} = useContext(ShopContext);
     const {productName}=useParams();
     const {name}=useParams();
+    const [isClicked, setIsClicked] = useState(false);
     const Product = all_product.find(product => product.path === name);
+
+    const handleAddToCart = () => {
+        setIsClicked(true);
+        addToCart(Product.id);
+        setTimeout(() => setIsClicked(false), 1000); 
+    };
   return (
     <div className='container my-28 lg:my-7 min-h-[650px]  '>
 
@@ -68,7 +74,12 @@ const ProductDisplay = () => {
                     <h2 className='font-normal'>Description : {Product.description}</h2>
                     </div>
                     <div className="mt-5">
-                        <button onClick={()=>{addToCart(Product.id)}} className="border-2 px-4 py-2 bg-red-500 hover:bg-red-700 duration-300 text-xl text-white font-bold">ADD TO CART</button>
+                    <button
+                            onClick={handleAddToCart}
+                            className={`border-2 px-4 py-2 ${isClicked ? 'bg-green-500  hover:bg-green-700' : 'bg-red-500  hover:bg-red-700'} duration-300 text-xl text-white font-bold`}
+                        >
+                            ADD TO CART
+                        </button>
                     </div>
                     <div className="font-bold mt-5 text-gray-500">
                         <h2>Category : {Product.category.toUpperCase()}</h2>
